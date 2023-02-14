@@ -54,13 +54,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "react": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
+    "start": "node index.js",
     "api": "set NODE_ENV=dev&&nodemon index.js",
-    "apimac": "export NODE_ENV=dev&&nodemon index.js",
-    "eject": "react-scripts eject"
+    "apimac": "export NODE_ENV=dev&&nodemon index.js"
   },
   "eslintConfig": {
     "extends": [
