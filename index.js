@@ -51,6 +51,7 @@ app.post("/", async (req, res) => {
       message: response.data.choices[0].text,
     });
   } catch (error) {
+    console.log(error);
     res.json({
       error: "Something went wrong!!",
     });
