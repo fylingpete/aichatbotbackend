@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 require("dotenv-flow").config();
-console.log("rpi");
+
 require("./routes/middlewares/mongo");
 
 const app = express();
