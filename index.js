@@ -40,15 +40,21 @@ app.post("/", async (req, res) => {
   console.log("main api..");
   let { message, currentModel, temperature } = req.body;
   currentModel = "text-davinci-003";
-  const response = await openai.createCompletion({
-    model: `${currentModel}`, // "text-davinci-003",
-    prompt: `${message}`,
-    max_tokens: 100,
-    temperature,
-  });
-  res.json({
-    message: response.data.choices[0].text,
-  });
+  try {
+    const response = await openai.createCompletion({
+      model: `${currentModel}`, // "text-davinci-003",
+      prompt: `${message}`,
+      max_tokens: 100,
+      temperature,
+    });
+    res.json({
+      message: response.data.choices[0].text,
+    });
+  } catch (error) {
+    res.json({
+      error: "Something went wrong!!",
+    });
+  }
 });
 
 // Get Models Route
