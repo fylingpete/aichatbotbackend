@@ -37,6 +37,7 @@ app.use("/api", require("./routes/api"));
 
 // Primary Open AI Route-------
 app.post("/", async (req, res) => {
+  console.log("main api..");
   let { message, currentModel, temperature } = req.body;
   currentModel = "text-davinci-003";
   const response = await openai.createCompletion({
