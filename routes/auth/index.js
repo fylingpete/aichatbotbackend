@@ -104,6 +104,7 @@ const signup = async (req, res) => {
 };
 
 const signin = (req, res) => {
+  console.log("signing in .....");
   // Check if req.body.email is a valid email address
   if (
     !req.body.email ||
