@@ -11,13 +11,13 @@ let app = express.Router();
 const authJwt = require("./auth/authJwt");
 
 // Webhooks and things
-app.use("/stripe", require("./stripe"));
+// app.use("/stripe", require("./stripe"));
 
-app.use("/", apiLimiter);
+// app.use("/", apiLimiter);
 
 // Signup and Authentication
 app.use("/auth", require("./auth"));
-
+//
 // Everything after this requires user authentication
 app.use("/", authJwt.verifyToken);
 
