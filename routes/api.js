@@ -3,7 +3,7 @@ const rateLimit = require("express-rate-limit");
 
 const apiLimiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 10 minutes
-  max: 200, // maximum of 200 requests per windowMs
+  max: 200, // maximum of 200 requests per windowM
 });
 
 let app = express.Router();
